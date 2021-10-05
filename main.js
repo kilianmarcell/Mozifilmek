@@ -1,5 +1,4 @@
      let filmTomb = [];
-
 class Film {
      constructor(nev, rendezo, kiadasiEv) {
           this.nev = nev;
@@ -18,9 +17,12 @@ function Hozzaad() {
      document.getElementById("inputNev").value = "";
      document.getElementById("inputRendezo").value = "";
      document.getElementById("inputkiadasiEv").value = "";
+
+     szamol = 0;
 }
 
 function Listazas() {
+
      document.getElementById("tablazatNev").innerHTML = "";
      document.getElementById("tablazetRendezo").innerHTML = "";
      document.getElementById("tablazatEv").innerHTML = "";
