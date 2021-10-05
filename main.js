@@ -20,4 +20,17 @@ function Hozzaad() {
      document.getElementById("inputkiadasiEv").value = "";
 }
 
+function Listazas() {
+     document.getElementById("tablazatNev").innerHTML = "";
+     document.getElementById("tablazetRendezo").innerHTML = "";
+     document.getElementById("tablazatEv").innerHTML = "";
+
+     for (let i = 0; i < filmTomb.length; i++) {
+          document.getElementById("tablazatNev").innerHTML += filmTomb[i].nev + "<br>";
+          document.getElementById("tablazetRendezo").innerHTML += filmTomb[i].rendezo + "<br>";
+          document.getElementById("tablazatEv").innerHTML += filmTomb[i].kiadasiEv + "<br>";
+     }
+}
+
 document.getElementById("gombKuld").addEventListener("click", Hozzaad);
+document.getElementById("gombListaz").addEventListener("click", Listazas);
