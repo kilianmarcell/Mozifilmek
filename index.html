@@ -5,26 +5,39 @@
      <meta http-equiv="X-UA-Compatible" content="IE=edge">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <title>Document</title>
+     <link rel="stylesheet" href="main.css">
      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
 </head>
-<body>
-     <div>
-          Név: <input type="text" id="inputNev">
+<body class="container">
+     <div class="h2 mt-5 mb-3">
+          <div class="baloldal">
+               Név:
+          </div>
+          <div>
+               <input type="text" id="inputNev">
+          </div>
+     </div>
+     <div class="h2 mb-3">
+          <div class="baloldal">
+               Rendező:
+          </div>
+          <div>
+               <input type="text" id="inputRendezo">
+          </div>
+     </div>
+     <div class="h2 mb-4">
+          <div class="baloldal">
+               Év: 
+          </div>
+          <div>
+               <input type="number" id="inputkiadasiEv">
+          </div>
      </div>
      <div>
-          Rendező: <input type="text" id="inputRendezo">
+          <button class="btn btn-lg btn-dark mb-5" id="gombKuld">Hozzáad</button>
      </div>
-     <div>
-          Év: <input type="number" id="inputkiadasiEv">
-     </div>
-     <div>
-          <button id="gombKuld">Hozzáad</button>
-     </div>
-     <div>
-          <button id="gombListaz">Listázás</button>
-     </div>
-     <table>
+     <table class="h3 table table-dark text-center">
           <tr>
                <th>Név</th>
                <th>Rendező</th>

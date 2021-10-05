@@ -14,15 +14,6 @@ function Hozzaad() {
      let film1 = new Film(nev, rendezo, kiadasiEv);
      filmTomb.push(film1);
 
-     document.getElementById("inputNev").value = "";
-     document.getElementById("inputRendezo").value = "";
-     document.getElementById("inputkiadasiEv").value = "";
-
-     szamol = 0;
-}
-
-function Listazas() {
-
      document.getElementById("tablazatNev").innerHTML = "";
      document.getElementById("tablazetRendezo").innerHTML = "";
      document.getElementById("tablazatEv").innerHTML = "";
@@ -32,7 +23,12 @@ function Listazas() {
           document.getElementById("tablazetRendezo").innerHTML += filmTomb[i].rendezo + "<br>";
           document.getElementById("tablazatEv").innerHTML += filmTomb[i].kiadasiEv + "<br>";
      }
+
+     document.getElementById("inputNev").value = "";
+     document.getElementById("inputRendezo").value = "";
+     document.getElementById("inputkiadasiEv").value = "";
+
+     szamol = 0;
 }
 
 document.getElementById("gombKuld").addEventListener("click", Hozzaad);
-document.getElementById("gombListaz").addEventListener("click", Listazas);
