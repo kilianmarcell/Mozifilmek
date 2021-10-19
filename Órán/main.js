@@ -37,17 +37,48 @@ function hozzaadKattintas() {
     document.getElementById("kiadasiEv").value = "";
 }
 
+function nevSzerintRendezes() {
+
+}
+
 function listazasKattintas() {
-    let tablazatHTML = "<table>";
-    tablazatHTML += "<tr><th>Név</th><th>Rendező</th><th>Kiadási év</th></tr>";
+    let tablaElem = document.createElement("table");
+    let elsoSorTrElem = document.createElement("tr");
+    let headerNevElem = document.createElement("th");
+    headerNevElem.innerHTML = "Név";
+    let headerRendezoElem = document.createElement("th");
+    headerNevElem.innerHTML = "Rendező";
+    let headerKiadasiEvElem = document.createElement("th");
+    headerNevElem.innerHTML = "Kiadási év";
+    elsoSorTrElem.appendChild(headerNevElem);
+    elsoSorTrElem.appendChild(headerRendezoElem);
+    elsoSorTrElem.appendChild(headerKiadasiEvElem);
+
+    headerNevElem.addEventListener("click", nevSzerintRendezes);
+
+    //let tablazatHTML = "<table>";
+    //tablazatHTML += "<tr><th>Név</th><th>Rendező</th><th>Kiadási év</th></tr>";
+
     for (let film of filmek) {
-        tablazatHTML += "<tr>";
-        tablazatHTML += "<td>" + film.nev + "</td>";
-        tablazatHTML += "<td>" + film.rendezo + "</td>";
-        tablazatHTML += "<td>" + film.kiadasiEv + "</td>";
-        tablazatHTML += "</tr>";
+        let trElem = document.createElement("tr");
+        let nevElem = document.createElement("td");
+        nevElem.innerHTML = film.nev;
+        let rendezoElem = document.createElement("td");
+        rendezoElem.innerHTML = film.rendezo;
+        let kiadasiEvElem = document.createElement("td");
+        kiadasiEvElem.innerHTML = film.kiadasiEv;
+        tablaElem.appendChild(trElem);
+
+        //tablazatHTML += "<tr>";
+        //tablazatHTML += "<td>" + film.nev + "</td>";
+        //tablazatHTML += "<td>" + film.rendezo + "</td>";
+        //tablazatHTML += "<td>" + film.kiadasiEv + "</td>";
+        //tablazatHTML += "</tr>";
     }
+    tablazatHTML != "</table>";
+    
     document.getElementById("tablazat").innerHTML = "";
+    document.getElementById("tablazat").appendChild(tablaElem);
 }
 
 function init() {
