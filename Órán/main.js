@@ -37,8 +37,20 @@ function hozzaadKattintas() {
     document.getElementById("kiadasiEv").value = "";
 }
 
-function nevSzerintRendezes() {
+function filmOsszehasonlitas(egyik, masik) {
+    if (egyik.nev > masik.nev) {
+        return 1;
+    } else if (egyik.nev < masik.nev) {
+        return -1;
+    } else {
+        return 0;
+    }
+}
 
+function nevSzerintRendezes() {
+    filmek.sort(filmOsszehasonlitas);
+
+    listazasKattintas();
 }
 
 function listazasKattintas() {
@@ -53,6 +65,8 @@ function listazasKattintas() {
     elsoSorTrElem.appendChild(headerNevElem);
     elsoSorTrElem.appendChild(headerRendezoElem);
     elsoSorTrElem.appendChild(headerKiadasiEvElem);
+
+    tablaElem.appendChild(elsoSorTrElem);
 
     headerNevElem.addEventListener("click", nevSzerintRendezes);
 
