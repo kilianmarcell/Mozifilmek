@@ -1,0 +1,26 @@
+* {
+    font-size: 24px;
+}
+
+div {
+    margin-bottom: 1em;
+    margin-left: 50px;
+}
+
+button {
+    background-color: darkblue;
+    color: white;
+    border-radius: 10px;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table td, table th {
+    border: 1px solid darkgray;
+}
+
+table tr:nth-child(even) {
+    background-color: lavender;
+}
